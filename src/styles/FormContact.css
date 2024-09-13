@@ -1,0 +1,25 @@
+
+.Formcontact{
+   justify-content: center;
+   text-align: center;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   display: flex;
+    left: 0;
+    top: 0;
+    width: 100%;
+   
+
+}
+
+.contactenos{
+    color: rgb(120, 181, 209);
+}
+
+.nombreycorreo{
+    text-align: center;
+
+}
+
+.PasajerosyFecha{
+    text-align: center;
+}
