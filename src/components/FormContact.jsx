@@ -1,86 +1,74 @@
-import React, { useState } from "react";
-import '../styles/FormContact.css'
-import Logo from '../img/Logo.png'
- 
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import '../styles/FormContact.css';
 
-function FormContact() {
-   
-  const [nombre, setNombre] = useState('');
-  const [correo, setCorreo] = useState('');
-  const [pasajeros, setPasajeros] = useState('');
-  const [fecha, setFecha] = useState('');
-  const [mensaje, setMensaje] = useState('');
+export const FormContact = () => {
+  const form = useRef();
 
-  function sendNombre(event) {
-    setNombre(event.target.value);
-  }
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  function sendCorreo(event) {
-    setCorreo(event.target.value);
-  }
-
-  function sendPasajeros(event) {
-    setPasajeros(event.target.value);
-  }
-
-  function sendFecha(event) {
-    setFecha(event.target.value);
-  }
-
-  function sendMensaje(event) {
-    setMensaje(event.target.value);
-  }
-     
-  const enviar = () => {
-
+    emailjs
+      .sendForm('service_lcm44fi', 'template_gb7s5ty', form.current, {
+        publicKey: 'qhGzMF0VRQ4SvXLiH',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
-    return(
-      <div className='Formcontact'>
-        <h2 className='contactenos'>Contáctenos</h2>
+  return (
+    <div className='contact-page'>
+      <h1 className='contact-title'>Contáctanos</h1>
+      <form className='FormContact' ref={form} onSubmit={sendEmail}>
+        <label htmlFor="user_name"></label>
+        <input
+          type="text"
+          id="user_name"
+          name="user_name"
+          placeholder="Nombre"
+          required
+        />
 
-    
-            <div className="nombreycorreo">
-                <label htmlFor="Nombre">Name/Nombre</label>
-                <input type="text" 
-                value={nombre}
-                onChange={sendNombre}
-                />
-                
-              <br />
-                <label htmlFor="Correo">Email</label>
-                <input type="text"
-                value={correo}
-                onChange={sendCorreo}
-                />
-             </div>
-            
-             <div className='PasajerosyFecha'>
-                <label htmlFor="Pasajeros">Pasajeros</label>
-                <input type="text"
-                value={pasajeros}
-                onChange={sendPasajeros}
-                />
-                <br />
-               <label htmlFor="Fecha">Fecha</label>
-               <input type="date"
-               value={fecha}
-               onChange={sendFecha}
-               />
-             </div>
-              <div>
-                <label htmlFor="Mensaje">Message/Mensaje</label>
-                <input type="text"
-                value={mensaje}
-                onChange={sendMensaje}
-               />
-               </div>
-               <button className='btnEnviar' onClick={enviar}>Enviar</button>
-        
+        <label htmlFor="user_email"></label>
+        <input
+          type="email"
+          id="user_email"
+          name="user_email"
+          placeholder="Correo electrónico"
+          required
+        />
 
-      </div>
-      
-    );
-};
+        <label htmlFor="message"></label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Mensaje"
+          rows="6"
+          required
+        />
+        <input className='submit-button' type="submit" value="Enviar" />
+      </form>
+
+      <div className="social-media">
+  <a href="https://facebook.com" target="_blank" rel="noreferrer">
+    <i className="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <i className="fab fa-instagram"></i>
+  </a>
+  <a href="https://wa.me/yourwhatsappnumber" target="_blank" rel="noreferrer">
+    <i className="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+    </div>
+  );
+}
 
 export default FormContact;

@@ -1,6 +1,6 @@
-async function deleteReservaciones(id) {
+async function DeleteUsers(id) {
     try {
-        const response = await fetch(`http://localhost:3001/Reservaciones/${id}`, {
+        const response = await fetch(`http://localhost:3001/users/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,4 +18,4 @@ async function deleteReservaciones(id) {
     }
 }
 
-export { deleteReservaciones };
+export { DeleteUsers };

@@ -1,5 +1,4 @@
-
-async function GetAdministrador() {
+async function getAmistrador() {
     try {
         const response = await fetch('http://localhost:3001/Administrador', {
             method: 'GET',
@@ -9,15 +8,15 @@ async function GetAdministrador() {
         });
 
         if (!response.ok) {
-            throw new Error('Error fetching users');
+            throw new Error('Error fetching administrador');
         }
 
-        const users = await response.json();
-        return users;
+        const administrador = await response.json();
+        return administrador;
     } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('Error fetching administrador:', error);
         throw error;
     }
 }
 
-export default GetAdministrador;
+export { getAmistrador };

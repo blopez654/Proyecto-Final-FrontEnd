@@ -1,12 +1,62 @@
-.principal{
-    justify-content: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   margin-top: 50%;
-    background-color: aqua;
-   
+.ContenedorPrincipal {
+   font-family: 'Arial', sans-serif;
+   color: #333;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100vh; /* Toda la altura de la pantalla */
+   padding: 20px;
 }
 
-.puraVida{
-   text-align: center;
-   font-family: 'Times New Roman', Times, serif;
+.puravida {
+   font-size: 4vw; /* Ajusta el tamaño según el ancho de la pantalla */
+   margin-bottom: 20px;
+   color: #008CBA;
+}
+
+.carousel-inner img {
+   width: 100vw; /* Toda la anchura de la pantalla */
+   height: 50vh; /* Ocupa la mitad de la altura de la pantalla */
+   object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+.subti {
+   font-size: 2.5vw;
+   margin-top: 20px;
+   color: #333;
+}
+
+.cuerpo {
+   font-size: 1.5vw;
+   margin: 20px 0;
+   color: #666;
+}
+
+.servicios {
+   list-style: none;
+   padding: 0;
+   margin: 20px 0;
+}
+
+.Opcion {
+   font-size: 1.8vw;
+   margin: 10px 0;
+   padding: 10px;
+   background-color: #f0f0f0;
+   border-radius: 5px;
+   color: #008CBA;
+}
+
+.info {
+   margin-top: 30px;
+   font-size: 1.8vw;
+   color: #666;
+}
+
+.footer {
+   font-size: 1.5vw;
+   color: #999;
+   padding: 10px;
+   background-color: #f8f8f8;
 }

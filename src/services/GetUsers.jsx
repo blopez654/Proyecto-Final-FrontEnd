@@ -1,6 +1,6 @@
-async function GetReservaciones() {
+async function getUsers() {
     try {
-        const response = await fetch('http://localhost:3001/Reservaciones', {
+        const response = await fetch('http://localhost:3001/users', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,4 +19,4 @@ async function GetReservaciones() {
     }
 }
 
-export default GetReservaciones;
+export { getUsers };

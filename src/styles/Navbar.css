@@ -1,18 +1,36 @@
-.contNav{
+.contNav {
+    background-color: #f8f8f8;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Navbar siempre visible */
     top: 0;
-    width: 1000px;
-    display: grid;
-    justify-content: center;
+    z-index: 1000;
+    margin-left: 50%;
 }
 
-.contenedorNavbar{
+.navbar {
+    background-color: transparent;
     display: flex;
-    gap: 70px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: flex-end;
+    width: 100%;
 }
 
-.text{
-    color: black;
-    font-size: 20px;
-    font-weight: 600;
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    font-size: 1.1rem;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #008CBA;
 }

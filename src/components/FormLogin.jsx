@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Swal from 'sweetalert2'
-import GetAdministrador from "../services/GetAdministrador";
-import  '../styles/FormLogin.css'
-import Logo from '../img/Logo.png'
+import Swal from 'sweetalert2';
+import  '../styles/FormLogin.css';
+import Logo from '../img/Logo.png';
 import { useNavigate } from 'react-router-dom';
-import Heater from './Header'
+
+import Nosara from '../img/Nosara.jpg';
 
 
 function FormLogin() {
@@ -19,7 +19,7 @@ function FormLogin() {
   
   function cargaEmail(event) {
     setEmail(event.target.value);
-  }
+  };
 
   const cargaPassword = (event) => {
     setPassword(event.target.value);
@@ -36,7 +36,7 @@ function FormLogin() {
         icon: "error",
         title: "",
         text: "¡No se permiten espacios vacios!",
-        footer: '<a a>'
+        footer: ''
       });
       return;
     }
@@ -54,22 +54,22 @@ function FormLogin() {
           showConfirmButton: false,
           timer: 1500
         });
-      
-        navigate('/FormAdmin');
+        navigate('/FormAdministracion');
+        
       }else {
         Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "¡Inicio de sesión fallido!",
-          footer: '<a href="#">¿Por qué tengo este problema?</a>'
+          footer: ''
         });
       }
   };
 
 
   return (
-  <div className="formLogin">
-      <div>
+  <div className='formLogin'>
+      <div className='login'>
         <img src={Logo} alt="Logo" className='logo' /> 
       </div>
        <h2 className='textLogin'>Iniciar sesion</h2>
@@ -100,7 +100,11 @@ function FormLogin() {
       />
      </div>
        <button className='inicio' onClick={inicio}>Inicio</button>
+       <button className='Volver' onClick={Volver}>Volver</button>
+
+      <img src={Nosara}  />
  </div>
+
   );
 };
 

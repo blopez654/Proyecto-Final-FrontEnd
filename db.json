@@ -2,10 +2,31 @@
     "Administrador":[{ 
 
      "id":"dcf",
-     "email":"blopez@fwdcostarica.com",
+     "email": "briana@gmail.com",
      "password": "3003"
+     },{
+        "id":"dcdf",
+        "email": "ana@gmail.com",
+        "password": "30s03"
+     }
+     
+     ],"users": [
+    {
+      "id": "1",
+      "email": "briannna@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "Shuttle":[{
+    "id":"11",
+    "driver": "jose lopez",
+    " pickup" : "nosara",
+    "destination": " san jose",
+    "date":" ",
+    "img": " "
 
 
-}],
- "Reservaciones":[]
+
+  }]    
+
 }

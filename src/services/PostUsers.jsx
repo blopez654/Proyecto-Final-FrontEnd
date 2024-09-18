@@ -1,14 +1,13 @@
-
-async function PostUsers(username,email,password) {
+async function PostUsers(email,password) {
     try {
      
         const userData = { 
-            username,
             email,
-            password
+            password 
+        
         };
 
-        const response = await fetch("http://localhost:3001/Administrador", {
+        const response = await fetch("http://localhost:3001/users", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -16,6 +15,7 @@ async function PostUsers(username,email,password) {
             body: JSON.stringify(userData)
         });
 
+     
         return await response.json();
 
         
@@ -25,4 +25,4 @@ async function PostUsers(username,email,password) {
     }
 }
 
-export default PostUsers ;
+export{PostUsers}

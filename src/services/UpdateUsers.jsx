@@ -1,13 +1,13 @@
-async function UpdateUsers(username, email,password) {
+async function UpdateUsers(email, password,id) {
     try {
      
         const userData = { 
-            username, 
-            email,
-            password
+            email, 
+            password,
+            id
         
         };
-        const response = await fetch("http://localhost:3001/Administrador/"+id, {
+        const response = await fetch("http://localhost:3001/users/"+id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,4 +23,4 @@ async function UpdateUsers(username, email,password) {
     }
 }
 
-export default UpdateUsers;
+export{UpdateUsers}

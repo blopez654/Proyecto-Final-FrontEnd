@@ -4,7 +4,7 @@ import Login from '../pages/Login';
 import Principal from '../pages/Principal';
 import Contact from '../pages/Contact';
 import Inicio from '../pages/Inicio';
-
+import Administracion from '../pages/Administracion';
 
 const Routing = () => {
   return (
@@ -15,7 +15,7 @@ const Routing = () => {
        <Route path="/Login" element={<Login />} />
        <Route path="/Principal" element={<Principal />} />
        <Route path="/Inicio" element={<Inicio />} />
-     
+       <Route path="/Administracion" element={<Administracion />} />
      </Routes>
     </Router>
  

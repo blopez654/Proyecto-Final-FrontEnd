@@ -5,7 +5,7 @@ import GetAdministrador from '../services/GetAdministrador';
 function CardAdministrador() {
 
 
-    const [users, setAdministrador] = useState([]);
+    const [Administrador, setAdministrador] = useState([]);
 
 
     useEffect(() => {
@@ -27,8 +27,8 @@ function CardAdministrador() {
       <div>
         <h1>Lista de </h1>
         <ul>
-          {users.map((user) => (
-            <li key={user.id}>{user.name}</li>
+          {users.map((Administrador) => (
+            <li key={Administrador.id}>{Administrador.name}</li>
           ))}
         </ul>
       </div>

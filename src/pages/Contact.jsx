@@ -1,12 +1,15 @@
 import React from "react";
-import FormContact from '../components/FormContact';
- 
+import Map from '../components/Map'
+import Header from '../components/Header';
+import { FormContact } from '../components/FormContact'
 
 function Contact() {
   
   return(
     <>
-    <FormContact />
+    <Header />
+     <FormContact />
+    <Map />
     </>
   )
 

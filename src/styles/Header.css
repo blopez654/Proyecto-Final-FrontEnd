@@ -1,13 +1,30 @@
-.header{
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 0;
+.header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    background-color: rgb(126, 186, 235);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo{
-    width: 250px;
-    height: 150px;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.navbar-container {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
 }
