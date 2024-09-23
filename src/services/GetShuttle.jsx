@@ -19,4 +19,4 @@ async function GetShuttle() {
     }
 }
 
-export { GetShuttle };
+export default GetShuttle;

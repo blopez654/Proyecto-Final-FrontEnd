@@ -1,0 +1,5 @@
+.contenedorContact{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 800px 300px;
+}

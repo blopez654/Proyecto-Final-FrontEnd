@@ -18,4 +18,4 @@ async function DeleteShuttle(id) {
     }
 }
 
-export { DeleteShuttle };
+export default DeleteShuttle;

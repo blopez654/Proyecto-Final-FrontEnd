@@ -1,22 +1,14 @@
-async function PostShuttle(id,driver,pickup,destination,date,img) {
+async function PostShuttle(data) {
     try {
      
-        const ShuttleData = { 
-            id,
-            driver,
-            pickup,
-            destination,
-            date,
-            img
-        
-        };
+     
 
         const response = await fetch("http://localhost:3001/Shuttle", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(ShuttleData)
+            body: JSON.stringify(data)
         });
 
      
@@ -29,4 +21,4 @@ async function PostShuttle(id,driver,pickup,destination,date,img) {
     }
 }
 
-export{PostShuttle}
+export default PostShuttle

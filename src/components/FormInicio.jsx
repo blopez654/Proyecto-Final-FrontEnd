@@ -1,52 +1,73 @@
 import React from "react";
-import '../styles/FormInicio.css';
-import Playa from '../img/playa.jpg';
-import Clientes from '../img/Clientes.png';
+import  '../styles/FormInicio.css';
+import Nosara from '../img/Nosara.jpg';
 import Minibus from '../img/Minibus.jpg';
-
+import Minibus2 from '../img/Minibus2.png';
+import { useNavigate } from 'react-router-dom';
 
 
 function FormInicio() {
-  
+   
+const navigate = useNavigate()
+
+const VerTransporteD = () => {
+        navigate("/Servicios")
+    }
 
   return (
-    <div className='FormInicio'>
-        <div className="banner">
-            <img className='banner-image' src={Playa} alt="Playa" />
-            <div className="overlay">
-                <h1 className='main-title'>Viaja cómodo, seguro y sin preocupaciones con Pura Vida Shuttle.</h1>
+    <div className='ContenedorPrincipal'>
+        <h1 className='puravida'>PURA VIDA SHUTTLE</h1>
+
+        <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-inner">
+                <div className="carousel-item active">
+                    <img src={Nosara} alt="Nosara" className="d-block w-100" />
+                </div>
+                <div className="carousel-item">
+                    <img src={Minibus2} alt="Minibus 2" className="d-block w-100" />
+                </div>
+                <div className="carousel-item">
+                    <img src={Minibus} alt="Minibus" className="d-block w-100" />
+                </div>
             </div>
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+            </button>
         </div>
-        <div className='content'>
-            <section className='section'>
-                <h2 className='subtitle'>
-                    Somos una empresa de transportes turísticos de alta calidad, 
-                    caracterizados por brindar un servicio seguro con altos estándares. 
-                    Nuestros choferes son bilingües y conocedores de la zona.
-                </h2>
-            </section>
-            <section className='section'>
-                <h2>Conductores capacitados, vehículos con seguro. <br />
-                    Reservas personalizadas, adaptables a horarios y necesidades especiales.
-                </h2>
-            </section>
-            <section className='cta'>
-                <h3>Ofrecemos transporte privado en Guanacaste, con atención personalizada y puntualidad garantizada.</h3>
-                <button className='cta-button'>Ver Servicios</button>
-            </section>
-            <section className='benefits'>
-                <p>
-                    Algunos beneficios de usar nuestro transporte privado incluyen: <br />
-                    Flexibilidad, privacidad y personalización del viaje a sus preferencias.
-                </p>
-            </section>
-            <div className='images'>
-                <img className='image' src={Minibus} alt="Minibus" />
-                <img className='image' src={Clientes} alt="Clientes" />
-            </div>
+
+        <h2 className='subti'>¡Con nosotros tendrás un viaje reconfortante!</h2>
+        <h3 className='cuerpo'>Somos una empresa que se especializa en brindar el mejor <br />
+        servicio para que usted y su familia puedan tener una buena  experiencia y <br />
+          seguridad al viajar en Costa Rica</h3>
+
+        <ul className='servicios'>
+            <li className='Opcion'>Transporte al Aeropuerto</li>
+            <li className='Opcion'>Viajes Privados</li>
+            <li className='Opcion'>Traslado Ejecutivo</li>
+            <li className='Opcion'>Viajes Largos</li>
+            <li className='Opcion'>Traslado de puerta a puerta</li>
+        </ul>
+        <ul className='servicios2'>
+            <li className='Opcion1'>Aeropuerto de San José</li>
+            <li className='Opcion1'>Liberia Guanacaste Aeropuerto</li>
+            <li className='Opcion1'>Arenal, La Fortuna</li>
+            <li className='Opcion1'>Monteverde</li>
+            <li className='Opcion1'>Tamarindo / Conchal</li>
+            <li className='Opcion1'>Jaco</li>
+        </ul>
+         <div>
+           <h3 className='info'>Elige el horario que más te favorezca</h3>
+           <h3 className='info'>Haz de tu viaje algo inolvidable.</h3>
         </div>
+        <button onClick={VerTransporteD}>Ver Transporte Disponible</button>
+     
     </div>
-)
+);
 }
 
 export default FormInicio;

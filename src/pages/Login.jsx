@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react'
 import FormLogin from '../components/FormLogin'
 
+
 function Login() {
-
-
- return(
-  <>
-
-  </>
-    )
+  return (
+    <div>
+        <FormLogin/>
+      
+    </div>
+  )
 }
-export default Login;
+
+export default Login

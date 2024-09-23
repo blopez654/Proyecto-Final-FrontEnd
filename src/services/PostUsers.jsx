@@ -1,28 +1,18 @@
-async function PostUsers(email,password) {
+async function PostUsers(data) {
     try {
-     
-        const userData = { 
-            email,
-            password 
-        
-        };
-
         const response = await fetch("http://localhost:3001/users", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userData)
+            body: JSON.stringify(data)
         });
 
-     
         return await response.json();
-
-        
     } catch (error) {
         console.error('Error posting user:', error);
         throw error;
     }
 }
 
-export{PostUsers}
+export default PostUsers;

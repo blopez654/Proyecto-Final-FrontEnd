@@ -1,4 +1,4 @@
-async function getUsers() {
+async function GetUser() {
     try {
         const response = await fetch('http://localhost:3001/users', {
             method: 'GET',
@@ -8,15 +8,15 @@ async function getUsers() {
         });
 
         if (!response.ok) {
-            throw new Error('Error fetching users');
+            throw new Error('Error fetching user');
         }
 
-        const users = await response.json();
-        return users;
+        const user = await response.json();
+        return user;
     } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('Error fetching user:', error);
         throw error;
     }
 }
 
-export { getUsers };
+export default GetUser;

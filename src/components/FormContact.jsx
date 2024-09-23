@@ -23,6 +23,7 @@ export const FormContact = () => {
   };
 
   return (
+    
     <div className='contact-page'>
       <h1 className='contact-title'>Contáctanos</h1>
       <form className='FormContact' ref={form} onSubmit={sendEmail}>
@@ -56,17 +57,16 @@ export const FormContact = () => {
       </form>
 
       <div className="social-media">
-  <a href="https://facebook.com" target="_blank" rel="noreferrer">
-    <i className="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://instagram.com" target="_blank" rel="noreferrer">
-    <i className="fab fa-instagram"></i>
-  </a>
-  <a href="https://wa.me/yourwhatsappnumber" target="_blank" rel="noreferrer">
-    <i className="fab fa-whatsapp"></i>
-  </a>
-</div>
+  
+     </div>
+     <div>
+      <p>
+        *Indique Número de pasajeros, Mascotas, lugar de llegada y de salida,
+        si se necesita silla para niños.
 
+      </p>
+     </div>
+    
     </div>
   );
 }

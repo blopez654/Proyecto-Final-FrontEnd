@@ -1,32 +1,25 @@
 {
-    "Administrador":[{ 
-
-     "id":"dcf",
-     "email": "briana@gmail.com",
-     "password": "3003"
-     },{
-        "id":"dcdf",
-        "email": "ana@gmail.com",
-        "password": "30s03"
-     }
-     
-     ],"users": [
+  "Administrador": [
+    {
+      "id": "dcf",
+      "email": "briana@gmail.com",
+      "password": "3003",
+      "role": "Administrador"
+    },
+    {
+      "id": "dcdf",
+      "email": "ana@gmail.com",
+      "password": "30s03",
+       "role": "Administrador"
+    }
+  ],
+  "users": [
     {
       "id": "1",
       "email": "briannna@gmail.com",
-      "password": "123456"
+      "password": "123456",
+       "role": "user"
     }
   ],
-  "Shuttle":[{
-    "id":"11",
-    "driver": "jose lopez",
-    " pickup" : "nosara",
-    "destination": " san jose",
-    "date":" ",
-    "img": " "
-
-
-
-  }]    
-
+  "Shuttle": []
 }

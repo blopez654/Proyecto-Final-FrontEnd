@@ -1,13 +1,13 @@
-async function UpdateUsers(email, password,id) {
+async function UpdateShuttle(transporte,descripcion,id) {
     try {
      
         const userData = { 
-            email, 
-            password,
+            transporte,
+            descripcion,
             id
         
         };
-        const response = await fetch("http://localhost:3001/users/"+id, {
+        const response = await fetch("http://localhost:3001/Shuttle/"+id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,9 +18,9 @@ async function UpdateUsers(email, password,id) {
      
         return await response.json();
     } catch (error) {
-        console.error('Error update user:', error);
+        console.error('Error update shuttle:', error);
         throw error;
     }
 }
 
-export{UpdateUsers}
+export default UpdateShuttle;
